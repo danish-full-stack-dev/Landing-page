@@ -30,6 +30,7 @@ export default function Main() {
       <div>
         <FoundationsSection/>
       </div>
+      <Page/>   
     </section>
   );
 }
