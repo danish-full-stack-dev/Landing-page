@@ -4,38 +4,38 @@ import { ChevronLeft, ChevronRight, Play } from "lucide-react";
 
 const testimonials = [
   {
-    company: "ThreeSixtyEight",
+    company: "DigitalBoost Agency",
     quote:
-      "The platform transformed how our team collaborates. We've seen a 40% increase in productivity.",
+      "The media buying platform transformed how we manage campaigns. We've seen a 50% increase in conversion rates.",
     author: "Sarah Johnson",
-    role: "Chief Operating Officer",
+    role: "Media Director",
     videoThumb:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&fit=crop",
   },
   {
-    company: "The Brand Leader",
+    company: "AdVantage Media",
     quote:
-      "We're still finding really cool, innovative tools within Teamwork.com itself that surprise and delight people all day long.",
+      "We're still finding innovative tools that surprise and delight our clients all day long.",
     author: "Kyle Duford",
-    role: "President and Executive Creative Director",
+    role: "CEO and Creative Director",
     videoThumb:
       "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800&h=600&fit=crop",
   },
   {
-    company: "OIC Advisors",
+    company: "ROI Masters",
     quote:
-      "The integration capabilities have streamlined our entire workflow. It's become indispensable to our operations.",
+      "The analytics integration has streamlined our entire media buying workflow. It's become indispensable.",
     author: "Michael Chen",
-    role: "Director of Technology",
+    role: "Head of Performance",
     videoThumb:
       "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=800&h=600&fit=crop",
   },
   {
-    company: "Invanity",
+    company: "Campaign Pros",
     quote:
-      "Customer support is exceptional and the features keep getting better. This is exactly what we needed.",
+      "Customer support is exceptional and the features keep getting better. This is exactly what we needed for media buying.",
     author: "Emma Rodriguez",
-    role: "VP of Product Development",
+    role: "VP of Media Operations",
     videoThumb:
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=800&h=600&fit=crop",
   },
@@ -54,16 +54,16 @@ export default function Carousel() {
   useEffect(() => {
     setInterval(() => {
       setActiveIndex((prev) =>
-        prev === testimonials.length - 1 ? 0 : prev + 1
+        prev === testimonials.length - 1 ? 0 : prev + 1,
       );
     }, 4000);
   }, [setActiveIndex]);
 
   return (
-    <div className="min-h-screen text-black py-16">
+    <div className="text-black py-10">
       <div className="w-full mx-auto">
         {/* Header */}
-        <h2 className="text-[42px] font-extrabold mx-auto w-fit my-14 text-center">
+        <h2 className="text-[42px] font-extrabold mx-auto w-fit my-14 text-center text-[#9C27B0]">
           {" "}
           With happier teams, the
           <br />
@@ -71,7 +71,7 @@ export default function Carousel() {
         </h2>
 
         {/* Company Tabs */}
-        <div className="flex justify-center mb-12">
+        <div className="flex justify-center mb-12 gap-6">
           {testimonials.map((testimonial, index) => (
             <button
               key={index}
@@ -111,7 +111,7 @@ export default function Carousel() {
                       isActive ? "opacity-100 block" : "opacity-0 hidden"
                     }`}
                   >
-                    <div className="bg-[#9C27B0] backdrop-blur rounded-2xl overflow-hidden">
+                    <div className="bg-linear-to-br from-[#c173cf] via-[#9C27B0] to-[#7e218f] backdrop-blur rounded-2xl overflow-hidden">
                       <div className="grid md:grid-cols-2 gap-0">
                         {/* Video Thumbnail */}
                         <div className="relative aspect-video md:aspect-auto">
