@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function BeforeAfterSlider() {
   const [sliderPosition, setSliderPosition] = useState(50);
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const isDraggingRef = useRef(false);
 
   const handleMove = (e) => {
@@ -175,7 +175,7 @@ export default function BeforeAfterSlider() {
 
           {/* Slider Line and Handle */}
           <div
-            className="absolute top-0 bottom-0 w-1 bg-white cursor-col-resize z-30"
+            className="absolute top-0 bottom-0 w-2 bg-white cursor-col-resize z-30"
             style={{ left: `${sliderPosition}%` }}
           >
             {/* Slider Handle */}

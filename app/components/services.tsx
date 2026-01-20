@@ -4,36 +4,39 @@ import Marquee from "./marqee";
 export default function Services() {
   return (
     <div>
-      <div className="flex flex-col py-20">
-        <p className="text-2xl mx-auto pb-8">
-          Happy customers. Happier clients. And the least-stressed teams around.
+      <div className="flex flex-col py-10">
+        <p className="text-2xl mx-auto py-10">
+          Happy clients. Successful campaigns. And the most profitable media
+          buys around.
         </p>
         <div className="grid grid-cols-4 text-center gap-4 py-8">
           {[
             {
-              heading: "16K+",
-              subheading: "BUSINESS",
+              heading: "500+",
+              subheading: "Active Campaigns",
               description:
-                "Keeping projects on-track, more profitable and less-nightmarish.",
+                "Media buying campaigns optimized and running across all platforms.",
               color: "#9C27B0",
             },
             {
-              heading: "22%",
-              subheading: "Billing utilization boost",
-              description: "That’s more billable hours, fewer mystery gaps.",
+              heading: "35%",
+              subheading: "Average ROI Increase",
+              description:
+                "Boost in return on ad spend through intelligent optimization.",
               color: "#39927B0",
             },
             {
-              heading: "17k+",
-              subheading: "New projects",
+              heading: "2.5M+",
+              subheading: "Ad Impressions",
               description:
-                "Created each week (then smashed out of ballparks, probably).",
+                "Delivered monthly with precision targeting and performance tracking.",
               color: "#9C27B0",
             },
             {
-              heading: "40M+",
-              subheading: "Billable hours",
-              description: "Logged in 2024. That’s 4,566 years of ka-chings.",
+              heading: "$50M+",
+              subheading: "Ad Spend Managed",
+              description:
+                "In media budgets optimized for maximum client results.",
               color: "#9C27B0",
             },
           ].map((item) => (

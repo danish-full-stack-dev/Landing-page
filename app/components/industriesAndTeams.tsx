@@ -4,9 +4,9 @@ import { Users, MessageSquare, Tag, Clock, CheckCircle } from "lucide-react";
 
 const industriesData = [
   {
-    title: "Agencies",
+    title: "E-commerce",
     description:
-      "Now all your teams can work on client projects in one platform (without having to copy it into excel for the Account Director).",
+      "Drive sales with targeted media campaigns that convert browsers into buyers across all digital channels.",
     image:
       "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop",
     overlay: {
@@ -19,22 +19,22 @@ const industriesData = [
     },
   },
   {
-    title: "IT Services & Software",
+    title: "SaaS & Technology",
     description:
-      "Organize. Delegate. Track profit at any time. It's about as boring as IT gets. In a good way.",
+      "Scale your user acquisition with data-driven media buying that maximizes LTV and minimizes CAC.",
     image:
       "https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&h=600&fit=crop",
     overlay: {
       type: "reporting",
-      title: "Reporting",
-      subtitle: "Data collection",
+      title: "Campaign Analytics",
+      subtitle: "Performance metrics",
       date: "May 16, 2024 - Jun 20, 2024",
     },
   },
   {
-    title: "Consulting",
+    title: "Healthcare & Finance",
     description:
-      "When parachuted in to save the day, Teamwork.com is your secret weapon. Especially when the client becomes a villain mid-project.",
+      "Navigate complex regulations while delivering compliant, high-performing media campaigns that build trust.",
     image:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&h=600&fit=crop",
     overlay: {
@@ -42,19 +42,29 @@ const industriesData = [
       activities: [
         {
           user: "Kelly M",
-          action: "tagged",
-          target: "Clair B",
+          action: "optimized",
+          target: "Ad spend",
           time: "Just now",
         },
-        { user: "Clair B", action: "tagged", target: "Brian P", time: "May 7" },
-        { user: "Brian P", action: "set priority to high", time: "May 1" },
+        {
+          user: "Clair B",
+          action: "launched",
+          target: "New campaign",
+          time: "May 7",
+        },
+        {
+          user: "Brian P",
+          action: "increased",
+          target: "CTR by 25%",
+          time: "May 1",
+        },
       ],
     },
   },
   {
-    title: "Accounting & Finance",
+    title: "Retail & Consumer Goods",
     description:
-      "If time really is money, then Teamwork.com is basically an ATM. (Metaphorically speaking.)",
+      "Turn seasonal trends into year-round success with dynamic media buying that adapts to market conditions.",
     image:
       "https://images.unsplash.com/photo-1554224311-beee2ece089d?w=800&h=600&fit=crop",
     overlay: {
@@ -66,9 +76,9 @@ const industriesData = [
 
 const teamsData = [
   {
-    title: "Marketing Teams",
+    title: "Media Buyers",
     description:
-      "Launch campaigns faster with collaborative tools that keep your creative teams aligned and productive.",
+      "Launch and optimize campaigns faster with collaborative tools that keep your media team aligned and productive.",
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
     overlay: {
@@ -81,22 +91,22 @@ const teamsData = [
     },
   },
   {
-    title: "Development Teams",
+    title: "Performance Marketers",
     description:
-      "Build better software with agile tools designed for modern development workflows.",
+      "Scale campaigns with data-driven insights and automated optimization for maximum ROI.",
     image:
       "https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?w=800&h=600&fit=crop",
     overlay: {
       type: "reporting",
-      title: "Sprint Planning",
-      subtitle: "Team velocity",
+      title: "Campaign Dashboard",
+      subtitle: "Real-time metrics",
       date: "Jan 1, 2024 - Jan 31, 2024",
     },
   },
   {
-    title: "Sales Teams",
+    title: "Account Managers",
     description:
-      "Close deals faster with streamlined processes and real-time collaboration across your sales org.",
+      "Manage client relationships while tracking campaign performance and delivering results on time.",
     image:
       "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&h=600&fit=crop",
     overlay: {
@@ -105,28 +115,28 @@ const teamsData = [
         {
           user: "Alex R",
           action: "updated",
-          target: "Deal status",
+          target: "Client report",
           time: "2h ago",
         },
         {
           user: "Sarah M",
-          action: "added",
-          target: "New contact",
+          action: "approved",
+          target: "New budget",
           time: "5h ago",
         },
         {
           user: "Mike T",
           action: "scheduled",
-          target: "Follow-up",
+          target: "Strategy call",
           time: "Yesterday",
         },
       ],
     },
   },
   {
-    title: "Operations Teams",
+    title: "Creative Teams",
     description:
-      "Streamline processes and boost efficiency across all your operational workflows.",
+      "Create compelling ads that perform with seamless collaboration between creatives and media buyers.",
     image:
       "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop",
     overlay: {
@@ -178,7 +188,7 @@ export default function IndustriesTeamsTabs() {
           {currentData.map((item, index) => (
             <div
               key={index}
-              className="group relative rounded-2xl overflow-hidden bg-[#9C27B0] hover:transform hover:scale-105 transition-all duration-300"
+              className="group relative rounded-2xl overflow-hidden bg-white hover:transform hover:scale-105 transition-all duration-300"
             >
               {/* Image */}
               <div className="relative h-80 overflow-hidden">
@@ -262,9 +272,9 @@ export default function IndustriesTeamsTabs() {
               </div>
 
               {/* Content */}
-              <div className="p-6 text-white">
+              <div className="p-6 text-gray-900">
                 <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-900 leading-relaxed">
                   {item.description}
                 </p>
               </div>
