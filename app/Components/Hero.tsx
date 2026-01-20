@@ -23,12 +23,12 @@ export default function Hero() {
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-6">
-    <Link
-      href="#"
-      className="rounded-lg bg-[#9C27B0] hover:bg-white/20 px-6 py-3 text-sm font-medium text-white transition border border-white/20"
-    >
-      Start Building
-    </Link>
+          <Link
+            href="#"
+            className="rounded-lg bg-[#9C27B0] hover:bg-white/20 px-6 py-3 text-sm font-medium text-white transition border border-white/20"
+          >
+            Start Building
+          </Link>
 
           <Link
             href="#"
