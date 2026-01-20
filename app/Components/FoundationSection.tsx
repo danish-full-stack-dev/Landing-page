@@ -70,7 +70,6 @@ export default function FoundationsSection() {
           </div> */}
         </div>
 
-        {/* RIGHT IMAGE */}
         <div className="relative flex justify-center lg:justify-end">
           <div className="relative w-full max-w-2xl">
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-gray-800/50 shadow-2xl">
@@ -81,7 +80,6 @@ export default function FoundationsSection() {
                 className="object-cover"
               />
               
-              {/* Optional overlay gradient for depth */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
             </div>
           </div>
