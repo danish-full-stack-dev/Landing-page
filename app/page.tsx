@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import Hero from "./Components/Hero";
 import ModernProductTeams from "./Components/ModernTeam";
 import Ai from "./Components/ArtificalIntelligence";
