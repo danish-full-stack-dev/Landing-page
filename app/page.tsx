@@ -9,11 +9,13 @@ import ProjectPlanning from "./Components/ProjectPlanning";
 import TaskTracking from "./Components/TaskTracking";
 import FoundationsSection from "./Components/FoundationSection";
 import CollaborateSection from "./Components/CollaborateSection";
+import HeroKin from "./Components/Heroo";
 
 export default function Main() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-black text-white">
-      <Hero/>
+      <HeroKin/>
+      {/* <Hero/>
       <div>
         <ModernProductTeams/>
       </div>
@@ -31,7 +33,7 @@ export default function Main() {
       </div>
       <div>
         <FoundationsSection/>
-      </div>
+      </div> */}
     </section>
   );
 }
