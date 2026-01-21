@@ -123,7 +123,7 @@ export default function ProjectPlanning() {
       <section className="w-full bg-black py-32">
         <div className="mx-auto max-w-7xl px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
-            <h2 className="text-4xl font-semibold  mb-10 text-[#9C27B0]">
+            <h2 className="text-5xl font-semibold  mb-10 text-[#9C27B0]">
               Ideate and specify
               <br />
               what to build next
