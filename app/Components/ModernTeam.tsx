@@ -7,29 +7,29 @@ import Image from "next/image";
 const cardData = [
   {
     id: 1,
-    title: "Purpose-built for\nproduct development",
+    title: "Agile Web Development\nTeams",
     image: "/producteteam.png",
-    modalTitle: "Purpose-built for product development",
+    modalTitle: "Agile Web Development Teams",
     modalDescription:
-      "Linear is designed specifically for modern product teams. With features tailored to your workflow, it helps you ship faster and more efficiently.\n\nFrom issue tracking to project planning, every feature is crafted to support the way high-performing product teams work.",
+      "Our teams are built for modern web development. With agile methodologies, we deliver high-quality websites and applications efficiently.\n\nFrom frontend to backend, every team member is skilled in the latest technologies to support your project's workflow.",
     showImage: true,
   },
   {
     id: 2,
-    title: "Designed to move fast",
+    title: "Fast and Responsive\nDevelopment",
     image: "/designspeed.png",
-    modalTitle: "Designed to move fast",
+    modalTitle: "Fast and Responsive Development",
     modalDescription:
-      "Linear is built in pursuit of high-performance. With its keyboard-first design, realtime sync, and zero-friction workflows, it delivers a focused experience ideal for fast-paced development environments.\n\nLinear's obsessive focus on speed not only results in improved developer productivity, but also enables teams to move faster.",
+      "We prioritize speed without compromising quality. With modern frameworks and tools, we create responsive websites that load quickly and perform well.\n\nOur focus on performance ensures your users have a seamless experience across all devices.",
     animation: true,
   },
   {
     id: 3,
-    title: "Crafted to perfection",
+    title: "Pixel-Perfect and\nUser-Friendly Designs",
     image: "/craftedperfection.png",
-    modalTitle: "Crafted to perfection",
+    modalTitle: "Pixel-Perfect and User-Friendly Designs",
     modalDescription:
-      "Every pixel, interaction, and detail in Linear is carefully designed to create a delightful and efficient experience for product teams.\n\nFrom the subtle animations to the thoughtful keyboard shortcuts, Linear's interface is a testament to design excellence.",
+      "Every detail in our web solutions is crafted with care. From intuitive UI/UX to clean code, we ensure delightful user experiences.\n\nOur designs are not only beautiful but also functional, driving user engagement and conversions.",
     showPerfection: true,
   },
 ];
@@ -130,7 +130,7 @@ export default function ModernProductTeams() {
                       className="object-cover opacity-80"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-neutral-900 via-transparent to-transparent" />
-                    
+
                     {/* Overlay icons */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="flex gap-8">
@@ -220,7 +220,7 @@ export default function ModernProductTeams() {
             opacity: 0.5;
           }
         }
-        
+
         @keyframes fadeInScale {
           0% {
             transform: scale(0);
