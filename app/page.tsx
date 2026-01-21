@@ -17,6 +17,20 @@ export default function Main() {
       >
         Web development
       </button>
+
+      <button
+        className="px-8 py-2 border-blue-700 text-lg border rounded-3xl"
+        onClick={() => router.push("/pages/email-marketing")}
+      >
+        Email marketing
+      </button>
+
+      <button
+        className="px-8 py-2 border-blue-700 text-lg border rounded-3xl"
+        onClick={() => router.push("/seo-software")}
+      >
+        SEO services
+      </button>
     </div>
   );
 }

@@ -14,7 +14,7 @@ export default function Page() {
       <Hero />
       <SocialProof />
       <FeaturesBenefits />
-      <Capabilities />
+      <Capabilities />  
       <Testimonials />
       <Pricing />
       <FAQ />
