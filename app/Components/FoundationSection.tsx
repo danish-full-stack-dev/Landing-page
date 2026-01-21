@@ -4,7 +4,6 @@ export default function FoundationsSection() {
   return (
     <section className="bg-black text-white py-24 mt-10 min-h-screen">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
         {/* LEFT CONTENT */}
         <div>
           <span className="text-lg text-gray-400 uppercase tracking-wide">
@@ -12,30 +11,30 @@ export default function FoundationsSection() {
           </span>
 
           <h2 className="text-[#9C27B0] mt-4 text-7xl md:text-7xl font-semibold leading-tight">
-            Built on strong <br /> foundations
+            Built on Strong <br /> Web Technologies
           </h2>
 
           <p className="mt-6 text-lg text-gray-300">
-            Linear is so simple to use, it's easy to overlook the wealth of
-            complex technologies packed under the hood that keep Linear robust,
-            safe, and blazing fast.
+            Our web development services are powered by the latest technologies
+            and best practices, ensuring robust, secure, and high-performance
+            solutions.
           </p>
 
           <div className="mt-12 space-y-10 text-xl border-t border-gray-800 pt-8">
             <Feature
-              title="Linear Sync Engine"
-              text="Built with a high-performance architecture and an obsessive focus on speed."
+              title="Modern Frameworks"
+              text="Built with React, Next.js, and other cutting-edge technologies for optimal performance."
             />
 
             <Feature
-              title="Enterprise-ready security"
-              text="Best-in-class security practices keep your work safe and secure at every layer."
+              title="Security First"
+              text="Implementing best security practices to protect your applications and user data."
               link
             />
 
             <Feature
-              title="Engineered for scale"
-              text="Built for teams of all sizes. From early-stage startups to global enterprises."
+              title="Scalable Architecture"
+              text="Designed to grow with your business, from small sites to enterprise applications."
             />
           </div>
 
@@ -70,7 +69,6 @@ export default function FoundationsSection() {
           </div> */}
         </div>
 
-        {/* RIGHT IMAGE */}
         <div className="relative flex justify-center lg:justify-end">
           <div className="relative w-full max-w-2xl">
             <div className="relative aspect-[3/4] rounded-2xl overflow-hidden border border-gray-800/50 shadow-2xl">
@@ -80,13 +78,11 @@ export default function FoundationsSection() {
                 fill
                 className="object-cover"
               />
-              
-              {/* Optional overlay gradient for depth */}
+
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

@@ -1,39 +1,22 @@
 "use client";
-
-import Image from "next/image";
-import Link from "next/link";
-import Hero from "./Components/Hero";
-import ModernProductTeams from "./Components/ModernTeam";
-import Ai from "./Components/ArtificalIntelligence";
-import ProjectPlanning from "./Components/ProjectPlanning";
-import TaskTracking from "./Components/TaskTracking";
-import FoundationsSection from "./Components/FoundationSection";
-import CollaborateSection from "./Components/CollaborateSection";
-import HeroKin from "./Components/Heroo";
+import { useRouter } from "next/navigation";
 
 export default function Main() {
+  const router = useRouter();
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-black text-white">
-      <HeroKin/>
-      {/* <Hero/>
-      <div>
-        <ModernProductTeams/>
-      </div>
-      <div>
-        <Ai/>
-      </div>
-      <div>
-        <ProjectPlanning/>
-      </div>
-      <div>
-        <TaskTracking/>
-      </div>
-      <div>
-        <CollaborateSection/>
-      </div>
-      <div>
-        <FoundationsSection/>
-      </div> */}
-    </section>
+    <div className="min-h-screen flex justify-center items-center gap-5">
+      <button
+        className="px-8 py-2 border-blue-700 border text-lg rounded-3xl"
+        onClick={() => router.push("/pages/media-buying")}
+      >
+        Media buying
+      </button>
+      <button
+        className="px-8 py-2 border-blue-700 text-lg border rounded-3xl"
+        onClick={() => router.push("/pages/web-development")}
+      >
+        Web development
+      </button>
+    </div>
   );
 }

@@ -12,14 +12,14 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 mx-auto max-w-6xl px-6 pt-40">
         <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight text-[#9C27B0] sm:text-5xl md:text-6xl">
-          Linear is a purpose-built tool for
-          <br className="hidden sm:block" /> planning and building products
+          Expert Web Development Services for
+          <br className="hidden sm:block" /> Building Modern Digital Solutions
         </h1>
 
         <p className="mt-6 max-w-2xl text-base text-white sm:text-lg">
           Empower your business with cutting-edge web development services.
-          <br />
-          Build responsive, scalable, and user-friendly web solutions.
+          Build responsive, scalable, and user-friendly web solutions tailored
+          to your needs.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-6">
@@ -41,7 +41,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Background Image */}
-      <div className=" mt-60 pointer-events-none absolute top-[280px] left-1/2 w-full max-w-5xl -translate-x-1/2 -rotate-2 opacity-90">
+      <div className="mt-20 pointer-events-none absolute left-1/2 w-full max-w-5xl -translate-x-1/2 -rotate-2 opacity-90">
         <Image
           src="/herobg.png"
           alt="Linear dashboard preview"
