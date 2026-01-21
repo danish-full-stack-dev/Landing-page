@@ -6,28 +6,28 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const cards = [
   {
-    eyebrow: "Customer Requests",
-    title: "Build what customers actually want",
+    eyebrow: "Client Collaboration",
+    title: "Build what clients actually need",
     image: "/herobg.png",
   },
   {
-    eyebrow: "Powerful git workflows",
-    title: "Automate pull requests and commit workflows",
+    eyebrow: "Version Control",
+    title: "Efficient Git workflows for seamless development",
     image: "/issuetracking.png",
   },
   {
-    eyebrow: "Linear Mobile",
-    title: "Move product work forward from anywhere",
+    eyebrow: "Mobile Optimization",
+    title: "Responsive design for all devices",
     image: "/productdirection.png",
   },
   {
-    eyebrow: "Linear Asks",
-    title: "Turn workplace requests into actionable issues",
+    eyebrow: "Feedback Integration",
+    title: "Incorporate client feedback into development",
     image: "/producteteam.png",
   },
   {
-    eyebrow: "Linear Asks",
-    title: "Turn workplace requests into actionable issues",
+    eyebrow: "Agile Processes",
+    title: "Iterative development with regular updates",
     image: "/craftedperfection.png",
   },
 ];
