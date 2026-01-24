@@ -2,6 +2,8 @@ import React from "react";
 import Hero from "./components/Hero";
 import SocialProof from "./components/SocialProof";
 import FeaturesBenefits from "./components/FeaturesBenefits";
+import BestPractices from "./components/BestPractices";
+import Integrations from "./components/Integrations";
 import Capabilities from "./components/Capabilities";
 import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
@@ -14,7 +16,9 @@ export default function Page() {
       <Hero />
       <SocialProof />
       <FeaturesBenefits />
-      <Capabilities />  
+      <BestPractices />
+      <Integrations />
+      <Capabilities />
       <Testimonials />
       <Pricing />
       <FAQ />
