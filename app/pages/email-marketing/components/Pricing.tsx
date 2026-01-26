@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { motion } from "framer-motion";
 
 const Pricing = () => {
   const plans = [
@@ -35,12 +36,22 @@ const Pricing = () => {
     <section className="bg-black text-gray-500 py-16 px-4 sm:px-6 lg:px-8 relative">
       <div className="absolute h-100 w-100 bg-white/5 blur-2xl rounded-br-full rounded-t-full -bottom-20 left-0"></div>
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-20">
+        <motion.h2
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           Pricing Plans
-        </h2>
+        </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-3">
           {plans.map((plan, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              viewport={{ once: false }}
               key={index}
               className={`bg-black ${index === 1 && "scale-107"} ${index === 2 && "scale-115"} p-8 rounded-lg text-center border border-gray-400/60 relative flex justify-center flex-col items-center`}
             >
@@ -56,7 +67,7 @@ const Pricing = () => {
               </p>
               <ul className="text-left space-y-2 pb-16">
                 {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center">
+                  <li key={idx} className="flex items-center text-white/80">
                     <span className="text-green-400 mr-2">✓</span> {feature}
                   </li>
                 ))}
@@ -64,7 +75,7 @@ const Pricing = () => {
               <button className="bg-[#9C27B0] hover:bg-[#6a107a] text-white/80 font-semibold py-2 px-6 rounded-2xl transition duration-300 bottom-5 absolute">
                 Get Started
               </button>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

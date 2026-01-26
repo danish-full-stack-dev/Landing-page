@@ -20,7 +20,7 @@ export default function Page() {
 
   const [index, setIndex] = React.useState(1);
   return (
-    <div className="bg-white/80">
+    <div className="bg-black text-white">
       <div className="max-w-9/12 mx-auto">
         <div className=" flex flex-col">
           <div className="flex justify-end text-center flex-col items-center h-[40vh] my-auto">
@@ -29,9 +29,9 @@ export default function Page() {
               <span className="text-[#9C27B0]">for Agencies</span>, built for
               results
             </h1>
-            <p className="text-xl w-4/6 my-6">
+            <p className="text-xl w-4/6 my-6 text-gray-300">
               Our platform is the{" "}
-              <span className="font-semibold">
+              <span className="font-semibold text-[#9C27B0]">
                 {" "}
                 AI-powered media buying and campaign management solution
               </span>{" "}
@@ -43,12 +43,12 @@ export default function Page() {
             <button className="bg-[#9C27B0] underline underline-offset-2 hover:cursor-pointer text-white px-6 py-3 hover:bg-transparent rounded-full font-semibold border-2 hover:border-[#9C27B0] border-transparent hover:text-[#9C27B0] transition duration-300">
               Start Optimizing Campaigns
             </button>
-            <button className="bg-white text-[#9C27B0] border-2 hover:bg-[#9C27B0] border-[#9C27B0] px-6 py-3 hover:cursor-pointer rounded-full font-semibold hover:text-white transition duration-300">
+            <button className="bg-transparent text-[#9C27B0] border-2 hover:bg-[#9C27B0] border-[#9C27B0] px-6 py-3 hover:cursor-pointer rounded-full font-semibold hover:text-white transition duration-300">
               Book a Strategy Call
             </button>
           </div>
           <div className="mx-auto w-fit">
-            <p className="text-sm">
+            <p className="text-sm text-gray-400">
               14 DAY FREE TRIAL. NO CREDIT CARD REQUIRED
             </p>
           </div>

@@ -1,6 +1,23 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
+
+export const gilroy = localFont({
+  src: [
+    {
+      path: "../public/fonts/Gilroy-Light.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Gilroy-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-gilroy",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${gilroy.className} antialiased`}
       >
         {children}
       </body>

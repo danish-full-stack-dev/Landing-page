@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import { motion } from "framer-motion";
 
 const BottomCTA = () => {
   return (
@@ -6,9 +7,15 @@ const BottomCTA = () => {
       <div className="absolute h-100 w-100 bg-white/5 blur-2xl rounded-br-full rounded-t-full bottom-20 left-0"></div>
       <div className="absolute h-100 w-100 bg-white/5 blur-2xl rounded-tl-full rounded-t-full bottom-20 right-0"></div>
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+        <motion.h2
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           Ready to Grow Your Business?
-        </h2>
+        </motion.h2>
         <p className="text-lg sm:text-xl mb-8 text-white/80">
           Join thousands of marketers who trust our platform to deliver results.
         </p>

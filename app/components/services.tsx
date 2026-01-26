@@ -42,7 +42,7 @@ export default function Services() {
           ].map((item) => (
             <div
               key={item.heading}
-              className="flex flex-col items-center mx-auto w-fit text-black"
+              className="flex flex-col items-center mx-auto w-fit text-white"
             >
               <h2 className={`text-5xl font-bold text-[${item.color}] mb-2`}>
                 {item.heading}

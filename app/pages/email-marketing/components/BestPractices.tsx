@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { motion } from "framer-motion";
 import { Mail, Clock, Users, TrendingUp } from "lucide-react";
 
@@ -32,45 +31,48 @@ const BestPractices = () => {
   ];
 
   return (
-    <section className="bg-black text-gray-500 py-16 px-4 sm:px-6 lg:px-8 relative">
-      <div className="absolute h-100 w-100 bg-white/5 blur-2xl rounded-br-full rounded-t-full -bottom-20 right-0"></div>
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-gray-900 text-white py-20 px-4 sm:px-6 lg:px-8 relative">
+      <div className="absolute inset-0 bg-linear-to-br from-purple-800/10 to-pink-800/10"></div>
+      <div className="max-w-7xl mx-auto relative z-10">
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16"
+          initial={{ opacity: 0, rotate: -10 }}
+          whileInView={{ opacity: 1, rotate: 0 }}
           transition={{ duration: 0.8 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           Email Marketing Best Practices
         </motion.h2>
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-[#9C27B0] h-full"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {practices.map((practice, index) => (
             <motion.div
               key={index}
-              className={`flex items-center mb-8 ${index % 2 === 0 ? "justify-start" : "justify-end"}`}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="bg-gray-800 p-8 rounded-xl shadow-2xl"
+              initial={{ opacity: 0, y: 100, scale: 0.8 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 100,
+              }}
               viewport={{ once: true }}
+              whileHover={{ y: -10, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }}
             >
-              <div
-                className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+              <motion.div
+                className="flex items-center mb-6"
+                whileHover={{ scale: 1.1 }}
               >
-                <div className="bg-[#9C27B0] rounded-full p-4 mr-4 ml-4">
-                  <practice.icon className="w-8 h-8 text-white" />
+                <div className="bg-purple-600 rounded-full p-4 mr-4">
+                  <practice.icon className="w-10 h-10 text-white" />
                 </div>
-                <div
-                  className={`bg-white/5 p-6 rounded-lg max-w-md ${index % 2 === 0 ? "text-left" : "text-right"}`}
-                >
-                  <h3 className="text-xl font-semibold mb-2 text-[#9C27B0]">
-                    {practice.title}
-                  </h3>
-                  <p className="text-gray-300">{practice.description}</p>
-                </div>
-              </div>
+                <h3 className="text-2xl font-semibold text-purple-400">
+                  {practice.title}
+                </h3>
+              </motion.div>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                {practice.description}
+              </p>
             </motion.div>
           ))}
         </div>

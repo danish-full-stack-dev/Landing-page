@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Hero = () => {
   return (
     <section className="min-h-screen bg-black text-gray-500 flex items-center justify-center px-4 sm:px-6 lg:px-8 relative">
-      <motion.div
+      <motion.div 
         className="inset-0 absolute"
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -15,7 +15,7 @@ const Hero = () => {
         <img
           src="/heroBG2.png"
           alt="nothing"
-          className="h-full object-cover w-full opacity-60"
+          className="h-full object-cover w-full opacity-30"
         />
       </motion.div>
 

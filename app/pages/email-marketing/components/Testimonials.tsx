@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import React from "react";
 
 const Testimonials = () => {
@@ -26,12 +28,22 @@ const Testimonials = () => {
     <section className="bg-black text-gray-500 h-[60dvh] px-4 sm:px-6 lg:px-8 relative">
       <div className="absolute h-100 w-100 bg-white/5 blur-2xl rounded-bl-full rounded-t-full bottom-0 right-0"></div>
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center h-full">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-20">
+        <motion.h2
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           Testimonials & Case Studies
-        </h2>
+        </motion.h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              viewport={{ once: false }}
               key={index}
               className="bg-black py-10 px-6 rounded-lg border-gray-400/60 border"
             >
@@ -40,7 +52,7 @@ const Testimonials = () => {
                 {testimonial.author}
               </p>
               <p className="text-gray-500 font-bold">{testimonial.result}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

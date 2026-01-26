@@ -32,35 +32,50 @@ const Integrations = () => {
   ];
 
   return (
-    <section className="bg-white/5 text-gray-500 py-24 px-4 sm:px-6 lg:px-8 relative">
-      <div className="absolute h-100 w-100 bg-white/5 blur-2xl rounded-br-full rounded-t-full -top-20 left-0"></div>
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-black text-white py-20 px-4 sm:px-6 lg:px-8 relative">
+      <div className="absolute inset-0 bg-linear-to-t from-gray-900/50 to-transparent"></div>
+      <div className="max-w-5xl mx-auto relative z-10">
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
           Powerful Integrations
         </motion.h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <div className="relative">
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-purple-500 h-full"></div>
           {integrations.map((integration, index) => (
             <motion.div
               key={index}
-              className="text-center flex flex-col items-center hover:scale-105 transition-all duration-300"
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: false }}
+              className={`flex items-center mb-12 ${index % 2 === 0 ? "justify-start" : "justify-end"}`}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -150 : 150 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.8,
+                delay: index * 0.15,
+                type: "spring",
+              }}
+              viewport={{ once: true }}
             >
-              <div className="bg-[#9C27B0] rounded-full p-6 mb-4">
-                <integration.icon className="w-12 h-12 text-white" />
+              <div
+                className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"} max-w-lg`}
+              >
+                <motion.div
+                  className="bg-purple-600 rounded-full p-5 mr-6 ml-6 relative z-10"
+                  whileHover={{ rotate: 360, scale: 1.1 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <integration.icon className="w-8 h-8 text-white" />
+                </motion.div>
+                <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
+                  <h3 className="text-xl font-semibold mb-2 text-purple-400">
+                    {integration.title}
+                  </h3>
+                  <p className="text-gray-300">{integration.description}</p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-[#9C27B0]">
-                {integration.title}
-              </h3>
-              <p className="text-gray-300 text-sm">{integration.description}</p>
             </motion.div>
           ))}
         </div>

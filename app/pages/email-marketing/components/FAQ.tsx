@@ -1,5 +1,6 @@
 "use client";
-import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -34,9 +35,15 @@ const FAQ = () => {
   return (
     <section className="bg-black text-gray-500 py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-20 md:mb-12">
+        <motion.h2
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12"
+          initial={{ opacity: 0, y: -50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           Frequently Asked Questions
-        </h2>
+        </motion.h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div
@@ -48,17 +55,18 @@ const FAQ = () => {
                 onClick={() => toggleFAQ(index)}
               >
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg sm:text-xl font-semibold text-white/80">
+                  <h3 className="text-lg sm:text-xl font-semibold text-white/80 gap-3 flex items-center">
+                    <span className="text-[#9C27B0] text-base">{index}.</span>
                     {faq.question}
                   </h3>
-                  <span className="text-white/80 text-2xl">
+                  <span className="text-[#9C27B0] text-2xl">
                     {openIndex === index ? "-" : "+"}
                   </span>
                 </div>
               </button>
               {openIndex === index && (
                 <div className="px-6 pb-6 transition-all">
-                  <p className="text-gray-500">{faq.answer}</p>
+                  <p className="text-white/70">{faq.answer}</p>
                 </div>
               )}
             </div>
